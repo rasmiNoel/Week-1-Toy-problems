@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="./studentGradeGenerator.js"></script>
+    <script src="./speedDetector.js"></script>
+    <script src="./netSalaryCalculator.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1> Student Grade Generator</h1>
-    <input type="number" onchange="limiter(this);" />
-    <button onclick = "fun(Grade)" > Calculate Grade </button>
 
-    <h1> Speed Detector</h1>
+<body style="background-color:rgb(218,218,218);">
+    <nav class="links">
 
-    <h1> Salary Calculator</h1>
+    </nav>
+    <main>
+        <h1> Student Grade Generator</h1>
+        <div class="sgg">
+            <div class="marksI">
+                <label>Input Student Marks</label>
+                <input class="marks" type="number" name="marks" required="" id="marks" style="width:5%;">
+            </div>
+            <button class="btn btn-primary" type="button" onclick="Grade()">Calculate Grade</button>
+            <div class="marksO">
+                <label>Student Grade :</label>
+                <input class="Grade" type="text" name="grade" id="randomidresult" style="width:5%;" readonly>
+            </div>
+        </div>
+        <h1> Speed Detector</h1>
+        <div class="marksI">
+            <div class="marksI">
+                <label>Speed</label>
+                <input class="speedDetector" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+            </div>
+            <button class="btn btn-primary" type="button" onclick="Grade()">Print</button>
+            <div class="marksO">
+                <label>Points :</label>
+                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+            </div>
+        </div>
+        <h1> Salary Calculator</h1>
+        <div class="marksI">
+            <div class="marksI">
+                <label>Basic Pay</label>
+                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+            </div>
+            <div class="marksI">
+                <label>Benefits</label>
+                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+            </div>
+            <div class="marksI">
+                <label>Basic Pay</label>
+                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+            </div>
+            <div class="marksI">
+                <label>Contribution Benefit</label>
+                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+            </div>
+            <div class="marksI">
+                <label>Insurance Relief</label>
+                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+            </div>
+            <button class="btn btn-primary" type="button" onclick="Grade()">Calculate</button>
+            <div class="marksO">
+                <label>PAYE :</label>
+                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+            </div>
+            <div class="marksO">
+                <label>NHIF :</label>
+                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+            </div>
+            <div class="marksO">
+                <label>NSSF :</label>
+                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+            </div>
+            <div class="marksO">
+                <label>Net Salary :</label>
+                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+            </div>
+        </div>
 
+    </main>
 </body>
+
 </html>
-
-
