@@ -87,28 +87,24 @@ function calculateNetSalary(grossSalary, payee, nhif, nssf) {
 
 function onClickCalcuate() {
     //obtain the values from the UI
-    const basicSalary = document.getElementById("basicSalary").value;
-    const benefits = document.getElementById("benefits").value;
-    const contributionBenefit = document.getElementById(
-        "contributionBenefit"
-    ).value;
-    const insuraceRelief = document.getElementById("insuraceRelief").value;
+    const basicSalary = document.getElementById("bpI").value;
+    const benefits = document.getElementById("bI").value;
+    const contributionBenefit = document.getElementById("cbI").value;
+    const insuraceRelief = document.getElementById("irI").value;
 
     //calculate the gross salary, taxable pay, payee, nhif, nssf and net salary
     const grossSalary = basicSalary + benefits;
-    const taxablePay =
-        grossSalary - (contributionBenefit + personalRelief + insuraceRelief);
-
+    const taxablePay = grossSalary - (contributionBenefit + personalRelief + insuraceRelief);
     const payee = calculatePayee(taxablePay);
     const nhif = calculateNHIF(grossSalary);
     const nssf = calculateNSSF(grossSalary);
     const netSalary = calculateNetSalary(grossSalary, payee, nhif, nssf);
 
     //run this to output the values on the UI
-    document.getElementById("grossSalary").value = grossSalary;
-    document.getElementById("taxablePay").value = taxablePay;
-    document.getElementById("payee").value = payee;
-    document.getElementById("nhif").value = nhif;
-    document.getElementById("nssf").value = nssf;
-    document.getElementById("netSalary").value = netSalary;
+    document.getElementById("gsO").value = grossSalary;
+    document.getElementById("tbO").value = taxablePay;
+    document.getElementById("payeeO").value = payee;
+    document.getElementById("nhifO").value = nhif;
+    document.getElementById("nssfO").value = nssf;
+    document.getElementById("netSalaryO").value = netSalary;
 }

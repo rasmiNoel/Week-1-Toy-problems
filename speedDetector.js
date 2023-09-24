@@ -20,6 +20,6 @@ function speedCheck(speed) {
 }
 function onclickCheckSpeed(){
     const speed = document.getElementById("speedI").value;
-    let checkResult = speedCheck(speed);
+    const checkResult = speedCheck(speed);
     document.getElementById("speedO").value = checkResult;
 }
