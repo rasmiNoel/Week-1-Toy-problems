@@ -21,9 +21,9 @@
         <div class="sgg">
             <div class="marksI">
                 <label>Input Student Marks</label>
-                <input type="number" id="marksI">
+                <input type="number" id="marksI" max="100" min="0">
             </div>
-            <button class="GradeBtn" type="button" onclick="Grade()">Calculate Grade</button>
+            <button class="GradeBtn" type="button" onclick="onClickCalcuateGrade()">Calculate Grade</button>
             <div class="marksO">
                 <label>Student Grade :</label>
                 <output type="text" id="marksO"></output>
@@ -35,7 +35,7 @@
                 <label>Speed</label>
                 <input type="number" id="Speed">
             </div>
-            <button class="speedBtn" onclick="speedCheck()">Print</button>
+            <button class="speedBtn" onclick="onclickCheckSpeed()">Print</button>
             <div class="speedO">
                 <label>Points :</label>
                 <output type="string" id="randomidresult"></output>
@@ -63,7 +63,7 @@
                 <label>Insurance Relief</label>
                 <input type="number" id="Speed">
             </div>
-            <button class="salaryBtn" type="button" onclick="payee(), NSSF_I(), NSSF_II(), NHIF()">Calculate</button>
+            <button class="salaryBtn" type="button" onclick="onClickCalcuate()">Calculate</button>
             <div class="payeO">
                 <label>PAYE :</label>
                 <output type="number" id="payeO"></output>

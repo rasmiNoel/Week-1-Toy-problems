@@ -18,3 +18,8 @@ function speedCheck(speed) {
 //if the demeritpoints is above 12, a text of 'License Suspended' is returned.
     }
 }
+function onclickCheckSpeed(){
+    const speed = document.getElementById("speedI").value;
+    let checkResult = speedCheck(speed);
+    document.getElementById("speedO").value = checkResult;
+}
