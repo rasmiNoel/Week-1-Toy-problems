@@ -1,0 +1,27 @@
+/*.marksI .marksO .speedI .speedO .payI .bI .bnI .cbI .irI .payeO .nhifO .nssfO .nsO {
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10%;
+    text-align: justify;
+}*/
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1%;
+    padding-left: 0%;
+}
+body {
+    text-align: center;
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 1%;
+    padding-left: 0%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-stretch: expanded;
+}
+#marksI{
+    background: white;
+     text-align: center;
+  }

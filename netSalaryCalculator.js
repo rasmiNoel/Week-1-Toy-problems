@@ -17,24 +17,20 @@ function limiter(insuraceRelief) {
 
 function payee() {
     if (taxablePay < 24000) {
-        return 0
+        return (taxablePay * 0.1) //rate is 10%
     }
-    else if (taxablePay > 24000 && taxablePay < 288000) {
-        return (taxablePay * 0.1)
-    }
-
-    else if (taxablePay > 288000 && taxablePay < 388001) {
-        return (taxablePay * 0.25)
-    }
-    else if (taxablePay > 388000 && taxablePay < 5612000) {
-        return (taxablePay * 0.3)
+    else if (taxablePay > 24000 && taxablePay < 32334) {
+        return (taxablePay * 0.25) //rate is 25%
     }
 
-    else if (taxablePay > 5612001 && taxablePay < 9600000) {
-        return (taxablePay * 0.325)
+    else if (taxablePay > 32333 && taxablePay < 500001) {
+        return (taxablePay * 0.3) //rate is 30%
     }
-    else if (taxablePay > 9600000) {
-        return (taxablePay * 0.35)
+    else if (taxablePay > 500000 && taxablePay < 800001) {
+        return (taxablePay * 0.325) //rate is 32.5%
+    }
+    else if (taxablePay > 8000000) {
+        return (taxablePay * 0.35) //rate is 35%
     }
 }
 

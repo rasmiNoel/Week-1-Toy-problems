@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="./style.css">
     <script src="./studentGradeGenerator.js"></script>
     <script src="./speedDetector.js"></script>
     <script src="./netSalaryCalculator.js"></script>
@@ -15,68 +16,69 @@
 
     </nav>
     <main>
-        <h1> Student Grade Generator</h1>
+        <h1>Week 1: Toy Problems</h1>
+        <h2> Student Grade Generator</h2>
         <div class="sgg">
             <div class="marksI">
                 <label>Input Student Marks</label>
-                <input class="marks" type="number" name="marks" required="" id="marks" style="width:5%;">
+                <input type="number" id="marksI">
             </div>
-            <button class="btn btn-primary" type="button" onclick="Grade()">Calculate Grade</button>
+            <button class="GradeBtn" type="button" onclick="Grade()">Calculate Grade</button>
             <div class="marksO">
                 <label>Student Grade :</label>
-                <input class="Grade" type="text" name="grade" id="randomidresult" style="width:5%;" readonly>
+                <output type="text" id="marksO"></output>
             </div>
         </div>
-        <h1> Speed Detector</h1>
-        <div class="marksI">
-            <div class="marksI">
+        <h2> Speed Detector</h2>
+        <div class="sD">
+            <div class="speedI">
                 <label>Speed</label>
-                <input class="speedDetector" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+                <input type="number" id="Speed">
             </div>
-            <button class="btn btn-primary" type="button" onclick="Grade()">Print</button>
-            <div class="marksO">
+            <button class="speedBtn" onclick="speedCheck()">Print</button>
+            <div class="speedO">
                 <label>Points :</label>
-                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+                <output type="string" id="randomidresult"></output>
             </div>
         </div>
-        <h1> Salary Calculator</h1>
-        <div class="marksI">
-            <div class="marksI">
+        <h2> Salary Calculator</h2>
+        <div class="sC">
+            <div class="payI">
                 <label>Basic Pay</label>
-                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+                <input type="number" id="Speed">
             </div>
-            <div class="marksI">
+            <div class="bI">
                 <label>Benefits</label>
-                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+                <input type="number" id="Speed">
             </div>
-            <div class="marksI">
+            <div class="bnI">
                 <label>Basic Pay</label>
-                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+                <input type="number" id="Speed">
             </div>
-            <div class="marksI">
+            <div class="cbI">
                 <label>Contribution Benefit</label>
-                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+                <input type="number" id="Speed">
             </div>
-            <div class="marksI">
+            <div class="irI">
                 <label>Insurance Relief</label>
-                <input class="basicPay" type="number" name="speedDetector" required="" id="Speed" style="width:5%;">
+                <input type="number" id="Speed">
             </div>
-            <button class="btn btn-primary" type="button" onclick="Grade()">Calculate</button>
-            <div class="marksO">
+            <button class="salaryBtn" type="button" onclick="payee(), NSSF_I(), NSSF_II(), NHIF()">Calculate</button>
+            <div class="payeO">
                 <label>PAYE :</label>
-                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+                <output type="number" id="payeO"></output>
             </div>
-            <div class="marksO">
+            <div class="nhifO">
                 <label>NHIF :</label>
-                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+                <output type="number" id="NHIFO"></output>
             </div>
-            <div class="marksO">
+            <div class="nssfO">
                 <label>NSSF :</label>
-                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+                <output type="number" id="NSSFO"></output>
             </div>
-            <div class="marksO">
+            <div class="nsO">
                 <label>Net Salary :</label>
-                <input class="gradeOutput" type="string" name="grade" id="randomidresult" style="width:5%;" readonly>
+                <output type="number" id="randomidresult"></output>
             </div>
         </div>
 

@@ -13,8 +13,8 @@ This project contains details about the Week 1 Toy problems.
 ********
 ## SetUp Instruction
 ### Requirements
-* [HTML](html.com)///////////////////////////////////
-* [css](Framework URL)///////////////////////////////
+* [HTML](html.com)
+* [css](Framework URL)
 * Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
 * Node (node.js)
 
@@ -33,15 +33,13 @@ This project contains details about the Week 1 Toy problems.
 ## How To Run It
 >  Clone repository
 
-> Run using live server//////////////////////////////////
+> Run using vsCode
 *****
 ## Live Link
-Or you can access the web application directly via this [https://rasminoel.netlify.app/](https://rasminoel.netlify.app/)///////////////////////////////////
+No live link
 *****
 ## Dependencies/////////////////////////////
-- Google fonts
-- Font awesome Icons
-- MD Bootstrap
+- Non
 *****
 ## Technologies Used/////////////////////////////////
 1. HTML
