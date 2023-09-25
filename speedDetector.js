@@ -1,9 +1,7 @@
 
-const speed = Number
 //define speed using const and making it a number
 let speedLimit = 70
-
-let demeritPoints = Number
+let demeritPoints = 0
 
 function speedCheck(speed) {
     if (speed < speedLimit) {
@@ -19,7 +17,7 @@ function speedCheck(speed) {
     }
 }
 function onclickCheckSpeed(){
-    const speed = document.getElementById("speedI").value;
-    const checkResult = speedCheck(speed);
-    document.getElementById("speedO").value = checkResult;
+    let speed = document.getElementById("speedI").value;
+    let checkResult = speedCheck(speed);
+    document.getElementById("speedO").innerHTML = checkResult;
 }

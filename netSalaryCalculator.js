@@ -1,9 +1,10 @@
 const personalRelief = 2400;
 
+// this functions ensures the maximum amount of insurance relief that can be entered is 5,000
 function limiter(insuraceRelief) {
-    if (insuraceRelief.value < 0) insuraceRelief.value = 0;
-    if (insuraceRelief.value > 5000) insuraceRelief.value = 5000;
-} // this functions ensures the maximum amount of insurance relief that can be entered is 5,000
+    if (insuraceRelief < 0) insuraceRelief = 0;
+    if (insuraceRelief > 5000) insuraceRelief = 5000;
+} 
 
 function calculatePayee(taxablePay) {
     if (taxablePay < 24000) {
@@ -18,7 +19,7 @@ function calculatePayee(taxablePay) {
         return taxablePay * 0.35; //rate is 35%
     }
 }
-
+//calculates NHIF from the parameter of grossSalary to give predetermined amounts based on the classes where grossSalary falls
 function calculateNHIF(grossSalary) {
     if (grossSalary < 6000) {
         //checks the gross salary and returns a predetermined amount
@@ -57,34 +58,30 @@ function calculateNHIF(grossSalary) {
         return 1700; //checks the gross salary and returns a predetermined amount
     }
 }
-
+//determines the lowest value of the two to be picked, determines whether a taxpayer is in NSSF tier 1 or 2
 function floor(valA, valB) {
     if (valA < valB) {
         return valA;
     }
     return valB;
 }
-
+//to obtain nssf we check whether the individual falls on tier 1 or 2 based on their index, this is then used to calculate the nssf pay
 function calculateNSSF(grossSalary) {
     const tier1Taxable = floor(grossSalary, 6000);
     const tier2Taxable = floor(grossSalary, 18000) - tier1Taxable;
-
     const tier1 = tier1Taxable * 0.06;
     const tier2 = tier2Taxable * 0.06;
-
     let nssf = tier1;
     if (tier2 >= 0) {
-        nssf += tier2;
+        nssf = tier2;
     }
     return nssf;
 }
 
 //checks the amount paid and confirms the limit, then returns a calculated solution based on the amount.
-
 function calculateNetSalary(grossSalary, payee, nhif, nssf) {
     return grossSalary - (payee + nhif + nssf);
 }
-
 function onClickCalcuate() {
     //obtain the values from the UI
     const basicSalary = document.getElementById("bpI").value;
@@ -101,10 +98,10 @@ function onClickCalcuate() {
     const netSalary = calculateNetSalary(grossSalary, payee, nhif, nssf);
 
     //run this to output the values on the UI
-    document.getElementById("gsO").value = grossSalary;
-    document.getElementById("tbO").value = taxablePay;
-    document.getElementById("payeeO").value = payee;
-    document.getElementById("nhifO").value = nhif;
-    document.getElementById("nssfO").value = nssf;
-    document.getElementById("netSalaryO").value = netSalary;
+    document.getElementById("gsO").innerHTML = grossSalary;
+    document.getElementById("tbO").innerHTML = taxablePay;
+    document.getElementById("payeeO").innerHTML = payee;
+    document.getElementById("nhifO").innerHTML = nhif;
+    document.getElementById("nssfO").innerHTML = nssf;
+    document.getElementById("netSalaryO").innerHTML = netSalary;
 }

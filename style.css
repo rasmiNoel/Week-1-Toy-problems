@@ -41,3 +41,8 @@ output {
     font-weight: bold;
     font: caption;
 }
+label {
+    text-align: start;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
