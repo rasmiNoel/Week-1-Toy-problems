@@ -33,7 +33,7 @@ function calculateGrade(marks) {
 }
 
 //this functions works by executing the calculate function when it is clicked
-function onClickCalcuateGrade() {
+function onClickCalculateGrade() {
     let marks = document.getElementById('marksI').value;
     //marks = limiter(marks);
     let grade = calculateGrade(marks);
