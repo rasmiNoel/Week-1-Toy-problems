@@ -1,13 +1,6 @@
 // A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
 
-//this links to the html document and inputs the figure that a user types into the function
-
-/*function limiter(marks) {
-    if (marks < 0) return 0;
-    if (marks > 100) return 100;
-    return marks;
-}*/
-//this ensures that the value of marks does not go below 0 and more than 100
+//function to calculate the student grade
 
 function calculateGrade(marks) {
     if (marks > 79) {

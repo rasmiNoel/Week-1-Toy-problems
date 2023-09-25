@@ -21,9 +21,11 @@
         <div class="sgg">
             <div class="marksI">
                 <label>Input Student Marks</label>
-                <input type="number" id="marksI" max="100" min="0">
+                <input type="number" id="marksI">
             </div>
-            <button class="GradeBtn" type="button" onclick="onClickCalculateGrade()">Calculate Grade</button>
+            <div>
+                <button class="GradeBtn" type="button" onclick="onClickCalculateGrade()">Calculate Grade</button>
+            </div>
             <div class="marksO">
                 <label>Student Grade :</label>
                 <output type="text" id="marksO"></output>
@@ -31,12 +33,14 @@
         </div>
         <h2> Speed Detector</h2>
         <div class="sD">
-            <div class="speedI">
+            <div class="spdI">
                 <label>Speed</label>
-                <input type="number" id="SpeedI">
+                <input type="number" id="speedI">
             </div>
-            <button class="speedBtn" onclick="onclickCheckSpeed()">Print</button>
-            <div class="speedO">
+            <div>
+                <button class="speedBtn" onclick="onclickCheckSpeed()">Print</button>
+            </div>
+            <div class="spdO">
                 <label>Points :</label>
                 <output type="string" id="speedO"></output>
             </div>
@@ -44,30 +48,12 @@
         <h2> Salary Calculator</h2>
         <div class="sC">
             <div class="payI">
-                <label>Basic Pay</label>
+                <label>Salary</label>
                 <input type="number" id="bpI">
             </div>
-            <div class="bI">
-                <label>Benefits</label>
-                <input type="number" id="bI">
-            </div>
-            <div class="cbI">
-                <label>Contribution Benefit</label>
-                <input type="number" id="cbI">
-            </div>
-            <div class="irI">
-                <label>Insurance Relief</label>
-                <input type="number" id="irI">
-            </div>
+           <div>
             <button class="salaryBtn" type="button" onclick="onClickCalcuate()">Calculate</button>
-            <div class="gsO">
-                <label>Gross Salary :</label>
-                <output type="number" id="gsO"></output>
-            </div>
-            <div class="nhifO">
-                <label>Taxable Pay :</label>
-                <output type="number" id="tbO"></output>
-            </div>
+           </div>
             <div class="payeO">
                 <label>PAYE :</label>
                 <output type="number" id="payeeO"></output>

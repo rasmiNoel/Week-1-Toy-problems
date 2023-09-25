@@ -1,63 +1,59 @@
-const personalRelief = 2400;
 
-// this functions ensures the maximum amount of insurance relief that can be entered is 5,000
-function limiter(insuraceRelief) {
-    if (insuraceRelief < 0) insuraceRelief = 0;
-    if (insuraceRelief > 5000) insuraceRelief = 5000;
-} 
-
-function calculatePayee(taxablePay) {
-    if (taxablePay < 24000) {
-        return taxablePay * 0.1; //rate is 10%
-    } else if (taxablePay > 24000 && taxablePay < 32334) {
-        return taxablePay * 0.25; //rate is 25%
-    } else if (taxablePay > 32333 && taxablePay < 500001) {
-        return taxablePay * 0.3; //rate is 30%
-    } else if (taxablePay > 500000 && taxablePay < 800001) {
-        return taxablePay * 0.325; //rate is 32.5%
-    } else if (taxablePay > 8000000) {
-        return taxablePay * 0.35; //rate is 35%
+//calculates Payee using provided parameters to obtain a value
+function calculatePayee(Salary) {
+    if (Salary < 24000) {
+        return (Salary * 0.1); //rate is 10%
+    } else if (23999 < Salary && Salary < 32334) {
+        return (Salary * 0.25); //rate is 25%
+    } else if (32333 < Salary && Salary < 500001) {
+        return (Salary * 0.3); //rate is 30%
+    } else if (500000 < Salary && Salary < 800001) {
+        return (Salary * 0.325); //rate is 32.5%
+    } else if (Salary > 800000) {
+        return (Salary * 0.35); //rate is 35%
     }
 }
+
 //calculates NHIF from the parameter of grossSalary to give predetermined amounts based on the classes where grossSalary falls
-function calculateNHIF(grossSalary) {
-    if (grossSalary < 6000) {
+function calculateNHIF(Salary) {
+    if (Salary < 6000) {
         //checks the gross salary and returns a predetermined amount
         return 150;
-    } else if (grossSalary > 5999 && grossSalary < 8000) {
+    } else if (Salary > 5999 && Salary < 8000) {
         return 300; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 7999 && grossSalary < 12000) {
+    } else if (Salary > 7999 && Salary < 12000) {
         return 400; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 11999 && grossSalary < 15000) {
+    } else if (Salary > 11999 && Salary < 15000) {
         return 500; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 14999 && grossSalary < 20000) {
+    } else if (Salary > 14999 && Salary < 20000) {
         return 600; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 19999 && grossSalary < 25000) {
+    } else if (Salary > 19999 && Salary < 25000) {
         return 750; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary < 24999 && grossSalary < 30000) {
+    } else if (Salary < 24999 && Salary < 30000) {
         return 850; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 29999 && grossSalary < 35000) {
+    } else if (Salary > 29999 && Salary < 35000) {
         return 900; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 34999 && grossSalary < 40000) {
+    } else if (Salary > 34999 && Salary < 40000) {
         return 950; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 39999 && grossSalary < 45000) {
+    } else if (Salary > 39999 && Salary < 45000) {
         return 1000; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 44999 && grossSalary < 50000) {
+    } else if (Salary > 44999 && Salary < 50000) {
         return 1100; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary < 59999 && grossSalary < 60000) {
+    } else if (Salary < 59999 && Salary < 60000) {
         return 1200; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 59999 && grossSalary < 70000) {
+    } else if (Salary > 59999 && Salary < 70000) {
         return 1300; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 69999 && grossSalary < 80000) {
+    } else if (Salary > 69999 && Salary < 80000) {
         return 1400; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 79999 && grossSalary < 90000) {
+    } else if (Salary > 79999 && Salary < 90000) {
         return 1500; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 89000 && grossSalary < 100000) {
+    } else if (Salary > 89000 && Salary < 100000) {
         return 1600; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 100000) {
+    } else if (Salary > 99999) {
         return 1700; //checks the gross salary and returns a predetermined amount
     }
 }
+
 //determines the lowest value of the two to be picked, determines whether a taxpayer is in NSSF tier 1 or 2
 function floor(valA, valB) {
     if (valA < valB) {
@@ -65,41 +61,38 @@ function floor(valA, valB) {
     }
     return valB;
 }
+
 //to obtain nssf we check whether the individual falls on tier 1 or 2 based on their index, this is then used to calculate the nssf pay
-function calculateNSSF(grossSalary) {
-    const tier1Taxable = floor(grossSalary, 6000);
-    const tier2Taxable = floor(grossSalary, 18000) - tier1Taxable;
-    const tier1 = tier1Taxable * 0.06;
-    const tier2 = tier2Taxable * 0.06;
+function calculateNSSF(Salary) {
+    let tier1Taxable = floor(Salary, 6000);
+    let tier2Taxable = floor(Salary, 18000) - tier1Taxable;
+    let tier1 = tier1Taxable * 0.06;
+    let tier2 = tier2Taxable * 0.06;
     let nssf = tier1;
-    if (tier2 >= 0) {
+    if (tier2 > 0) {
         nssf = tier2;
     }
     return nssf;
 }
 
 //checks the amount paid and confirms the limit, then returns a calculated solution based on the amount.
-function calculateNetSalary(grossSalary, payee, nhif, nssf) {
-    return grossSalary - (payee + nhif + nssf);
+function calculateNetSalary(Salary, payee, nhif, nssf) {
+    return (Salary - (payee + nhif + nssf));
 }
-function onClickCalcuate() {
-    //obtain the values from the UI
-    const basicSalary = document.getElementById("bpI").value;
-    const benefits = document.getElementById("bI").value;
-    const contributionBenefit = document.getElementById("cbI").value;
-    const insuraceRelief = document.getElementById("irI").value;
 
-    //calculate the gross salary, taxable pay, payee, nhif, nssf and net salary
-    const grossSalary = basicSalary + benefits;
-    const taxablePay = grossSalary - (contributionBenefit + personalRelief + insuraceRelief);
-    const payee = calculatePayee(taxablePay);
-    const nhif = calculateNHIF(grossSalary);
-    const nssf = calculateNSSF(grossSalary);
-    const netSalary = calculateNetSalary(grossSalary, payee, nhif, nssf);
+//function to obtain the payee, nhif, nssf and net salary
+function onClickCalcuate() {
+
+    //obtain the values from the UI
+    let Salary = document.getElementById("bpI").value;
+
+    //calculate the payee, nhif, nssf and net salary
+    let payee = calculatePayee(Salary);
+    let nhif = calculateNHIF(Salary);
+    let nssf = calculateNSSF(Salary);
+    let netSalary = calculateNetSalary(Salary, payee, nhif, nssf);
 
     //run this to output the values on the UI
-    document.getElementById("gsO").innerHTML = grossSalary;
-    document.getElementById("tbO").innerHTML = taxablePay;
     document.getElementById("payeeO").innerHTML = payee;
     document.getElementById("nhifO").innerHTML = nhif;
     document.getElementById("nssfO").innerHTML = nssf;
