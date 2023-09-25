@@ -8,7 +8,8 @@ This project contains details about the Week 1 Toy problems.
 ******
 
 ## SCREENSHOTS
-- 
+- ! <img width="1904" alt="Screenshot 2023-09-25 at 13 35 36" src="https://github.com/rasmiNoel/Week-1-Toy-problems/assets/144110040/a97cc77a-6130-4786-8c0a-be076022e9f1">
+!
 
 ********
 ## SetUp Instruction
@@ -35,8 +36,8 @@ This project contains details about the Week 1 Toy problems.
 
 > Run using vsCode
 *****
-## Live Link
-No live link
+## Live Link 
+This site can be accessed via the live link: https://week1toyproblems.netlify.app/
 *****
 ## Dependencies/////////////////////////////
 - Non
