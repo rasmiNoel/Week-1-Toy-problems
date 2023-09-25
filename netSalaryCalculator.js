@@ -48,7 +48,7 @@ function calculateNHIF(grossSalary) {
         return 1500; //checks the gross salary and returns a predetermined amount
     } else if (grossSalary > 89000 && grossSalary < 100000) {
         return 1600; //checks the gross salary and returns a predetermined amount
-    } else if (grossSalary > 100000) {
+    } else if (grossSalary > 99999) {
         return 1700; //checks the gross salary and returns a predetermined amount
     }
 }
