@@ -52,7 +52,7 @@ function calculateNHIF(grossSalary) {
         return 1700; //checks the gross salary and returns a predetermined amount
     }
 }
-//determines the lowest value of the two to be picked, determines whether a taxpayer is in NSSF tier 1 or 2
+/*//determines the lowest value of the two to be picked, determines whether a taxpayer is in NSSF tier 1 or 2
 function floor(valA, valB) {
     if (valA < valB) {
         return valA;
@@ -65,13 +65,20 @@ function floor(valA, valB) {
 function calculateNSSF(grossSalary) {
     const tier1Taxable = floor(grossSalary, 6000);
     const tier2Taxable = floor(grossSalary, 18000) - tier1Taxable;
-    const tier1 = tier1Taxable * 0.06;
-    const tier2 = tier2Taxable * 0.06;
+    const tier1 = 360;
+    const tier2 = grossSalary * 0.06;
     let nssf = tier1;
-    if (tier2 > 0) {
-        nssf = tier2;
+    if (tier2 > 6000) {
+        nssf = 720;
     }
-    return nssf;
+    return nssf = tier1;
+}*/
+
+function calculateNSSF(grossSalary) {
+    if ((grossSalary * 0.06) > 6000) {
+        return 720;
+    }
+    return 360;
 }
 
 //checks the amount paid and confirms the limit, then returns a calculated solution based on the amount.
